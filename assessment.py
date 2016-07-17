@@ -91,7 +91,22 @@ def word_length_sorted(words):
         [(1, ['a']), (2, ['an', 'ok']), (3, ['day']), (5, ['apple'])]
     """
 
-    return []
+    #create new dictionary to store tuples
+    #create empty list to store values in tuples_dictionary
+    # value = []
+    # tuples_list = []
+    
+    # for word in words:
+    #     # print len(word)
+    #     # print word
+
+    #     tuple_item = ((len(word), word)
+
+    #     tuples_list.append(tuple_item)    
+
+    #     print tuples_list
+
+    pass
 
 
 def translate_to_pirate_talk(phrase):
@@ -133,7 +148,47 @@ def translate_to_pirate_talk(phrase):
         'me swabbie be not a man!'
     """
 
-    return ""
+    #create dictionary called translate to link each English word to a key and
+    #have the value be its translation in Pirate
+
+    translate = {
+        'sir': 'matey',
+        'hotel': 'fleabag inn',
+        'student': 'swabbie',
+        'man': 'matey',
+        'professor': 'foul blaggart',
+        'restaurant': 'galley',
+        'your': 'yer',
+        'excuse': 'arr',
+        'students': 'swabbies',
+        'are': 'be',
+        'restroom': 'head',
+        'my': 'me',
+        'is': 'be'
+        }
+
+    #take input string, phrase, and split it into a list binded to words
+    words = phrase.split(" ")
+
+    #create empty string to hold our translated words
+    translated = ""
+
+    #loop through words list and if a word matches to a key in the translate
+    #dictionary, add the value to the translated string. Otherwise, just add
+    #the word itself
+    for word in words:
+        if word in translate:
+            translated += translate.get(word) + " "
+        else:
+            translated += word + " "
+    
+    #strip the extra space on the end and return
+    translated = translated.rstrip()       
+
+    return translated
+
+
+
 
 
 def kids_game(names):
