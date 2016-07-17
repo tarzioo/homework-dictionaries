@@ -125,7 +125,17 @@ def top_chars(phrase):
 
     """
 
-    return []
+    letters_in_phrase = {}
+
+    for char in phrase:
+        current_count = letters_in_phrase.get(char, 0)
+        letters_in_phrase[char] = current_count + 1
+
+    value_list = letters_in_phrase.values()
+
+    sorted_values = sorted(value_list)
+
+    return sorted_values
 
 #####################################################################
 # You can ignore everything below this.

@@ -29,7 +29,19 @@ def count_words(phrase):
         {'Porcupine': 1, 'do.': 1, 'porcupine': 1, 'see,': 1}
     """
 
-    return {}
+    #split phrase into a list called words
+    words = phrase.split(" ")
+
+    #create an empty dictionary
+    word_count = {}
+
+    #Use a for loop to separate each item in words to be a key in dictionary
+    #If key already exists, then increment the value in key
+    for word in words:
+        current_count = word_count.get(word, 0)
+        word_count[word] = current_count + 1
+
+    return word_count
 
 
 def get_melon_price(melon_name):
