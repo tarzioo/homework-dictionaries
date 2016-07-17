@@ -64,7 +64,15 @@ def get_melon_price(melon_name):
         'No price found'
     """
 
-    return 0
+    #Create a dictionary based on the data
+    melon_info = {'Watermelon': 2.95, "Cantaloupe": 2.50, "Musk": 3.25, "Christmas": 14.25}
+
+    #Check if melon_name is in list. If so, return value. Otherwise return
+    #'No price found'
+    if melon_name in melon_info:
+        return melon_info[melon_name]
+    else:
+        return "No price found"
 
 
 def word_length_sorted(words):
