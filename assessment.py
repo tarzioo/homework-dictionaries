@@ -93,20 +93,20 @@ def word_length_sorted(words):
 
     #create new dictionary to store tuples
     #create empty list to store values in tuples_dictionary
-    # value = []
-    # tuples_list = []
+    value = ()
+    tuples_list = []
     
-    # for word in words:
-    #     # print len(word)
-    #     # print word
+    #use for loop to set tuple and bind to value identifier. value[0] is the
+    #length of the word, and value[1] is the word. Append this tuple to the
+    #tuples_list. Once completed, sort tuples list and return
+    #I COULD NOT FIGURE OUT HOW TO COMBINE THE LIKE TUPLES
+    for word in words:
+        value = len(word), [word]
+        tuples_list.append(value)
 
-    #     tuple_item = ((len(word), word)
+    tuples_list = sorted(tuples_list)  
 
-    #     tuples_list.append(tuple_item)    
-
-    #     print tuples_list
-
-    pass
+    return tuples_list   
 
 
 def translate_to_pirate_talk(phrase):
@@ -229,7 +229,10 @@ def kids_game(names):
     good solutions here will definitely require a dictionary.
     """
 
-    return []
+
+
+
+    return 
 
 #####################################################################
 # You can ignore everything below this.
