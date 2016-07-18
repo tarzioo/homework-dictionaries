@@ -96,8 +96,13 @@ def get_sum_zero_pairs(numbers):
         >>> sort_pairs( get_sum_zero_pairs([1, 3, -1, 1, 1, 0]) )
         [[-1, 1], [0, 0]]
     """
+    
+    for num in range(len(numbers)-1):
+        print num
 
-    return []
+
+
+    return 
 
 
 def top_chars(phrase):
@@ -124,18 +129,31 @@ def top_chars(phrase):
     Do not count spaces, but count all other characters.
 
     """
+    #make all characters in the string phrase lower case and remove all spaces
+    phrase = phrase.lower().replace(" ", "")
 
+    #create dictionary to store all characters and their count using a for loop
     letters_in_phrase = {}
 
     for char in phrase:
         current_count = letters_in_phrase.get(char, 0)
         letters_in_phrase[char] = current_count + 1
 
-    value_list = letters_in_phrase.values()
+    #grab all the values in the dictionary and sort to see the highest. Then bind
+    #the value of the highest to a variable. Use a for loop to find the keys
+    #that match the highest in the dictionary. If it matches, append the key to
+    #the list highest_values. Return highest_values once the whole dictionary has
+    #been searched
+    values = letters_in_phrase.values()
+    values = sorted(values)
+    highest = values[-1]
+    highest_values = []
 
-    sorted_values = sorted(value_list)
+    for letter, count in letters_in_phrase.iteritems():
+        if count == highest:
+            highest_values.append(letter)
 
-    return sorted_values
+    return highest_values        
 
 #####################################################################
 # You can ignore everything below this.
