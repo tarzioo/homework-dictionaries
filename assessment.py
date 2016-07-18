@@ -229,10 +229,19 @@ def kids_game(names):
     good solutions here will definitely require a dictionary.
     """
 
+    word_chain = {}
+    result = ['bagon']
+
+    for name in names:
+        word_chain[name] = [name[0], name[-1]]
+
+    for word, [first_letter, last_letter] in word_chain.iteritems():
+        if first_letter == result[-1][-1]:
+        result.append('word')
 
 
-
-    return 
+    print word_chain    
+    print result
 
 #####################################################################
 # You can ignore everything below this.
