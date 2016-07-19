@@ -232,23 +232,32 @@ def kids_game(names):
     #INCOMPLETE
 
 
+    # word_chain = {}
+    # result = ['bagon']
+
+    # for name in names:
+    #     word_chain[name] = [name[0], name[-1]]
+
+    # for word, [first_letter, last_letter] in word_chain.items():
+    #     last = result[-1][-1]
+    #     if word[0] == last:
+    #         print last
+    #         result.append(word)
+
+
+
+    # print word_chain    
+    # print result
+
     word_chain = {}
     result = ['bagon']
 
     for name in names:
-        word_chain[name] = [name[0], name[-1]]
+        word_chain[name[0]] = name
 
-    for word, [first_letter, last_letter] in word_chain.items():
-        last = result[-1][-1]
-        if word[0] == last:
-            print last
-            result.append(word)
-
-
-
-    print word_chain    
-    print result
-
+        for char, word in word_chain.items():
+            
+    print word_chain
 #####################################################################
 # You can ignore everything below this.
 
